@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPing">#009966</color>
+    <color name="colorPingRed">#FF0099</color>
+    <color name="colorConfigType">#f97910</color>
+
+    <color name="color_fab_active">#f97910</color>
+    <color name="color_fab_inactive">#9C9C9C</color>
+    <color name="color_secondary">#727272</color>
+
+    <color name="colorPrimary">#121212</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="windowBackground">#121212</color>
+    <color name="windowBackgroundTransparent">#CC121212</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecondary">#B3FFFFFF</color>
+    <color name="menuBackground">#1F1F1F</color>
+    <color name="menuTextColor">#FFFFFF</color>
+    <color name="globlink_text_color">#FF6B6B</color>
+    <color name="connection_test_text">#FFFFFF</color>
+    <color name="selected_server_highlight">#FF6B6B</color>
+</resources>

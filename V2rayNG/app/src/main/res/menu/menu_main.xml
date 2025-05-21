@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_server_text"
+        android:title="Add Server"
+        app:showAsAction="always"
+        app:titleTextColor="@color/color_fab_active" />
+    <item
+        android:id="@+id/add_config"
+        android:icon="@drawable/ic_add_24dp"
+        android:title="@string/menu_item_add_config"
+        app:showAsAction="always"
+        app:iconTint="@color/color_fab_active">
+        <menu>
+            <item
+                android:id="@+id/import_qrcode"
+                android:icon="@drawable/ic_qu_scan_24dp"
+                android:title="@string/menu_item_import_config_qrcode"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_clipboard"
+                android:icon="@drawable/ic_copy"
+                android:title="@string/menu_item_import_config_clipboard"
+                app:showAsAction="never" />
+            <!--
+            <item
+                android:id="@+id/import_manually_vmess"
+                android:title="@string/menu_item_import_config_manually_vmess"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_vless"
+                android:title="@string/menu_item_import_config_manually_vless"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_ss"
+                android:title="@string/menu_item_import_config_manually_ss"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_socks"
+                android:title="@string/menu_item_import_config_manually_socks"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_http"
+                android:title="@string/menu_item_import_config_manually_http"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_trojan"
+                android:title="@string/menu_item_import_config_manually_trojan"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_wireguard"
+                android:title="@string/menu_item_import_config_manually_wireguard"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/import_manually_hysteria2"
+                android:title="@string/menu_item_import_config_manually_hysteria2"
+                app:showAsAction="never" />
+
+
+            <item
+                android:title="@string/menu_item_import_config_custom"
+                app:showAsAction="ifRoom">
+                <menu>
+                    <item
+                        android:id="@+id/import_config_custom_clipboard"
+                        android:title="@string/menu_item_import_config_custom_clipboard"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/import_config_custom_local"
+                        android:title="@string/menu_item_import_config_custom_local"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/import_config_custom_url"
+                        android:title="@string/menu_item_import_config_custom_url"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/import_config_custom_url_scan"
+                        android:title="@string/menu_item_import_config_custom_url_scan"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+            -->
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/service_restart"
+        android:icon="@drawable/ic_qu_switch_24dp"
+        android:title="Restart"
+        app:showAsAction="never"
+        app:iconTint="@color/color_fab_active" />
+    <item
+        android:id="@+id/del_all_config"
+        android:icon="@drawable/ic_delete_24dp"
+        android:title="Delete All Server"
+        app:showAsAction="never"
+        app:iconTint="@color/color_fab_active" />
+    <item
+        android:id="@+id/ping_all"
+        android:icon="@drawable/ic_cloud_download_24dp"
+        android:title="Test Delay"
+        app:showAsAction="never"
+        app:iconTint="@color/color_fab_active" />
+
+    <!--
+    <item
+        android:id="@+id/real_ping_all"
+        android:title="@string/title_real_ping_all_server"
+        app:showAsAction="never" />
+        -->
+    <!--
+    <item
+        android:id="@+id/sort_by_test_results"
+        android:title="@string/title_sort_by_test_results"
+        app:showAsAction="never" />
+        -->
+    <item
+        android:id="@+id/sub_update"
+        android:title="@string/title_sub_update"
+        app:showAsAction="never" />
+</menu>
