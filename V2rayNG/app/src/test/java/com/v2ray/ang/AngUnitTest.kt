@@ -1,6 +1,6 @@
-package com.v2ray.ang
+package com.globlink.vpn
 
-import com.v2ray.ang.util.Utils
+import com.globlink.vpn.util.Utils
 import org.junit.Test
 
 import org.junit.Assert.*

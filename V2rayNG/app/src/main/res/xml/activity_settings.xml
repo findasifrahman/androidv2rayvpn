@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/pref_general">
+        <Preference
+            android:key="pref_theme"
+            android:title="@string/pref_theme"
+            android:summary="@string/pref_theme_summary"
+            app:iconSpaceReserved="false" />
+        <Preference
+            android:key="pref_language"
+            android:title="@string/pref_language"
+            android:summary="@string/pref_language_summary"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_vpn">
+        <Preference
+            android:key="pref_vpn_dns"
+            android:title="@string/pref_vpn_dns"
+            android:summary="@string/pref_vpn_dns_summary"
+            app:iconSpaceReserved="false" />
+        <Preference
+            android:key="pref_vpn_mtu"
+            android:title="@string/pref_vpn_mtu"
+            android:summary="@string/pref_vpn_mtu_summary"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_about">
+        <Preference
+            android:key="pref_about_version"
+            android:title="@string/pref_about_version"
+            android:summary="@string/pref_about_version_summary"
+            app:iconSpaceReserved="false" />
+        <Preference
+            android:key="pref_about_license"
+            android:title="@string/pref_about_license"
+            android:summary="@string/pref_about_license_summary"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen> 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Globlink</string>
+    <string name="app_name" translatable="false">GloblinkVPN</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -25,21 +25,22 @@
     <string name="menu_item_add_config">Add config</string>
     <string name="menu_item_save_config">Save config</string>
     <string name="menu_item_del_config">Delete config</string>
-    <string name="menu_item_import_config_qrcode">Import config from QRcode</string>
-    <string name="menu_item_import_config_clipboard">Import config from Clipboard</string>
-    <string name="menu_item_import_config_manually_vmess">Type manually[VMess]</string>
-    <string name="menu_item_import_config_manually_vless">Type manually[VLESS]</string>
-    <string name="menu_item_import_config_manually_ss">Type manually[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">Type manually[SOCKS]</string>
-    <string name="menu_item_import_config_manually_http">Type manually[HTTP]</string>
-    <string name="menu_item_import_config_manually_trojan">Type manually[Trojan]</string>
-    <string name="menu_item_import_config_manually_wireguard">Type manually[Wireguard]</string>
-    <string name="menu_item_import_config_manually_hysteria2">Type manually[Hysteria2]</string>
-    <string name="menu_item_import_config_custom">Custom config</string>
-    <string name="menu_item_import_config_custom_clipboard">Import custom config from Clipboard</string>
-    <string name="menu_item_import_config_custom_local">Import custom config from locally</string>
-    <string name="menu_item_import_config_custom_url">Import custom config from URL</string>
-    <string name="menu_item_import_config_custom_url_scan">Import custom config scan URL</string>
+    <string name="menu_item_import_config">Import Configuration</string>
+    <string name="menu_item_import_config_qrcode">Scan QR Code</string>
+    <string name="menu_item_import_config_clipboard">Import from Clipboard</string>
+    <string name="menu_item_import_config_manually_vmess">Add VMess Server</string>
+    <string name="menu_item_import_config_manually_vless">Add VLESS Server</string>
+    <string name="menu_item_import_config_manually_ss">Add Shadowsocks Server</string>
+    <string name="menu_item_import_config_manually_socks">Add SOCKS Server</string>
+    <string name="menu_item_import_config_manually_http">Add HTTP Server</string>
+    <string name="menu_item_import_config_manually_trojan">Add Trojan Server</string>
+    <string name="menu_item_import_config_manually_wireguard">Add WireGuard Server</string>
+    <string name="menu_item_import_config_manually_hysteria2">Add Hysteria2 Server</string>
+    <string name="menu_item_import_config_custom">Import Custom Configuration</string>
+    <string name="menu_item_import_config_custom_clipboard">Import from Clipboard</string>
+    <string name="menu_item_import_config_custom_local">Import from Local File</string>
+    <string name="menu_item_import_config_custom_url">Import from URL</string>
+    <string name="menu_item_import_config_custom_url_scan">Scan URL QR Code</string>
     <string name="del_config_comfirm">Confirm delete ?</string>
     <string name="del_invalid_config_comfirm">Please test before deleting! Confirm delete ?</string>
     <string name="server_lab_remarks">remarks</string>
@@ -350,5 +351,26 @@
     </string-array>
 
     <string name="toast_success_import_servers" translatable="false">Successfully imported %d servers</string>
+
+    <!-- Settings Screen -->
+    <string name="pref_general">General</string>
+    <string name="pref_theme">Theme</string>
+    <string name="pref_theme_summary">Choose app theme</string>
+    <string name="pref_language">Language</string>
+    <string name="pref_language_summary">Choose app language</string>
+    <string name="pref_vpn">VPN</string>
+    <string name="pref_vpn_dns">VPN DNS</string>
+    <string name="pref_vpn_dns_summary">Configure DNS settings for VPN</string>
+    <string name="pref_vpn_mtu">VPN MTU</string>
+    <string name="pref_vpn_mtu_summary">Configure MTU settings for VPN</string>
+    <string name="pref_about">About</string>
+    <string name="pref_about_version">Version</string>
+    <string name="pref_about_version_summary">Current app version</string>
+    <string name="pref_about_license">License</string>
+    <string name="pref_about_license_summary">View open source licenses</string>
+
+    <!-- App Shortcuts -->
+    <string name="app_shortcut_switch">Switch VPN</string>
+    <string name="app_shortcut_scan">Scan QR Code</string>
 
 </resources>

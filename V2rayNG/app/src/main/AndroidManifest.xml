@@ -192,8 +192,8 @@
                 android:resource="@xml/app_widget_provider" />
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.v2ray.ang.action.widget.click" />
-                <action android:name="com.v2ray.ang.action.activity" />
+                <action android:name="com.globlink.vpn.action.widget.click" />
+                <action android:name="com.globlink.vpn.action.activity" />
             </intent-filter>
         </receiver>
         <receiver
@@ -260,7 +260,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/cache_paths" />
+                android:resource="@xml/file_paths" />
         </provider>
 
     </application>

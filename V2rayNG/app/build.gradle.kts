@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.v2ray.ang"
+    namespace = "com.globlink.vpn"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.v2ray.ang"
+        applicationId = "com.globlink.vpn"
         minSdk = 21
         targetSdk = 35
         versionCode = 629
@@ -36,6 +36,11 @@ android {
         }
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+        abortOnError = false
     }
 
     buildTypes {

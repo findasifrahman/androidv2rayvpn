@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
+        android:shortcutId="switch"
         android:enabled="true"
         android:icon="@drawable/ic_qu_switch_24dp"
-        android:shortcutDisabledMessage="@string/app_widget_name"
-        android:shortcutId="shortcuts_switch"
-        android:shortcutLongLabel="@string/app_widget_name"
-        android:shortcutShortLabel="@string/app_widget_name">
-
+        android:shortcutShortLabel="@string/app_shortcut_switch"
+        android:shortcutLongLabel="@string/app_shortcut_switch">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.v2ray.ang.ui.ScSwitchActivity"
-            android:targetPackage="com.v2ray.ang" />
-        <categories android:name="android.shortcut.conversation" />
+            android:targetClass="com.globlink.vpn.ui.ScSwitchActivity"
+            android:targetPackage="com.globlink.vpn" />
     </shortcut>
     <shortcut
+        android:shortcutId="scan"
         android:enabled="true"
         android:icon="@drawable/ic_qu_scan_24dp"
-        android:shortcutDisabledMessage="@string/menu_item_import_config_qrcode"
-        android:shortcutId="shortcuts_scan"
-        android:shortcutLongLabel="@string/menu_item_import_config_qrcode"
-        android:shortcutShortLabel="@string/menu_item_import_config_qrcode">
-
+        android:shortcutShortLabel="@string/app_shortcut_scan"
+        android:shortcutLongLabel="@string/app_shortcut_scan">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.v2ray.ang.ui.ScScannerActivity"
-            android:targetPackage="com.v2ray.ang" />
-        <categories android:name="android.shortcut.conversation" />
+            android:targetClass="com.globlink.vpn.ui.ScScannerActivity"
+            android:targetPackage="com.globlink.vpn" />
     </shortcut>
 </shortcuts>
