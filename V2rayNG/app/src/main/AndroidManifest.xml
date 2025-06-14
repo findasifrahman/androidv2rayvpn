@@ -28,6 +28,9 @@
         android:required="false" />
 
     <!-- https://developer.android.com/about/versions/11/privacy/package-visibility -->
+    <queries>
+        <package android:name="*" />
+    </queries>
     <uses-permission
         android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />

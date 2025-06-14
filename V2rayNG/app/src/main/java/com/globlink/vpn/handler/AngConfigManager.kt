@@ -30,6 +30,9 @@ import java.util.UUID
 object AngConfigManager {
     private const val TAG = "AngConfigManager"
 
+    // Store VPN IDs for each config
+    var vpnIds: Map<String, String> = mapOf()
+
     /**
      * parse config form qrcode or...
      */

@@ -449,20 +449,51 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 // Debug: Print original input
                 android.util.Log.d("V2rayNG", "Original input: $server")
                 
-                // Decrypt if encrypted
-                val decryptedServer = if (server != null && CryptoUtils.isEncrypted(server)) {
-                    android.util.Log.d("V2rayNG", "Input appears to be encrypted, attempting decryption")
-                    val decrypted = CryptoUtils.decryptAES(server)
-                    android.util.Log.d("V2rayNG", "Decrypted result: $decrypted")
-                    decrypted
-                } else {
-                    android.util.Log.d("V2rayNG", "Input is not encrypted, using as is")
-                    server
+                if (server == null) {
+                    withContext(Dispatchers.Main) {
+                        toast(R.string.toast_failure)
+                        binding.pbWaiting.hide()
+                    }
+                    return@launch
                 }
-                
-                android.util.Log.d("V2rayNG", "Final config to import: $decryptedServer")
-                
-                val count = AngConfigManager.importBatchConfig(decryptedServer, "", true)
+
+                val configList = server.split("\n")
+                val validConfigs = mutableListOf<String>()
+                val vpnIds = mutableMapOf<String, String>()
+
+                for (config in configList) {
+                    if (config.isBlank()) continue
+
+                    val decryptedConfig = CryptoUtils.decryptConfig(config)
+                    if (decryptedConfig != null) {
+                        // Check if timestamp is valid (within 2 minutes)
+                        if (CryptoUtils.isConfigValid(decryptedConfig.timestamp)) {
+                            validConfigs.add(decryptedConfig.config)
+                            vpnIds[decryptedConfig.config] = decryptedConfig.vpnId
+                            android.util.Log.d("V2rayNG", "Valid encrypted config found with VPN ID: ${decryptedConfig.vpnId}")
+                        } else {
+                            android.util.Log.d("V2rayNG", "Config timestamp expired")
+                        }
+                    } else {
+                        // If decryption fails, assume it's a plain config
+                        validConfigs.add(config)
+                        android.util.Log.d("V2rayNG", "Using plain config")
+                    }
+                }
+
+                if (validConfigs.isEmpty()) {
+                    withContext(Dispatchers.Main) {
+                        toast(R.string.toast_failure)
+                        binding.pbWaiting.hide()
+                    }
+                    return@launch
+                }
+
+                // Store VPN IDs for later use
+                AngConfigManager.vpnIds = vpnIds
+
+                // Import valid configs
+                val count = AngConfigManager.importBatchConfig(validConfigs.joinToString("\n"), "", true)
                 delay(500L)
                 withContext(Dispatchers.Main) {
                     if (count > 0) {
